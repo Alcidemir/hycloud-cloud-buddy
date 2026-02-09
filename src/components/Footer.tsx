@@ -1,9 +1,9 @@
 import { Cloud } from "lucide-react";
 
 const footerLinks = {
-  Product: ["Compute", "Storage", "Networking", "Databases", "Edge Functions"],
-  Resources: ["Documentation", "API Reference", "Status", "Changelog"],
-  Company: ["About", "Blog", "Careers", "Contact"],
+  Serviços: ["Suporte Técnico", "Gestão de T.I.", "Segurança Digital", "Redes", "Backup"],
+  Empresa: ["Sobre Nós", "Diferenciais", "Blog", "Trabalhe Conosco"],
+  Suporte: ["Central de Ajuda", "Abrir Chamado", "SLA", "Status"],
 };
 
 const Footer = () => {
@@ -19,7 +19,7 @@ const Footer = () => {
               </span>
             </a>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Modern cloud infrastructure for developers who ship fast.
+              Suporte em T.I. para empresas que querem crescer com segurança e eficiência.
             </p>
           </div>
 
@@ -41,10 +41,10 @@ const Footer = () => {
 
         <div className="mt-16 pt-8 border-t border-border/40 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            © 2026 HyCloud. All rights reserved.
+            © 2026 HyCloud. Todos os direitos reservados.
           </p>
           <div className="flex gap-6">
-            {["Privacy", "Terms", "Security"].map((item) => (
+            {["Privacidade", "Termos", "LGPD"].map((item) => (
               <a key={item} href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                 {item}
               </a>

@@ -1,44 +1,42 @@
 import { motion } from "framer-motion";
-import { Server, Shield, Globe, Gauge, Code2, Database } from "lucide-react";
+import { Monitor, Shield, Wifi, HardDrive, Headset, Settings } from "lucide-react";
 
-const features = [
+const services = [
   {
-    icon: Globe,
-    title: "Global Edge Network",
-    description: "Deploy to 40+ regions worldwide. Your content, closer to every user.",
+    icon: Headset,
+    title: "Suporte Técnico",
+    description: "Atendimento remoto e presencial para resolver problemas de hardware, software e rede com agilidade.",
   },
   {
-    icon: Gauge,
-    title: "Instant Scaling",
-    description: "Automatic scaling from zero to millions. Pay only for what you use.",
+    icon: Monitor,
+    title: "Gestão de T.I.",
+    description: "Gerenciamento completo da infraestrutura tecnológica da sua empresa, com monitoramento contínuo.",
   },
   {
     icon: Shield,
-    title: "Enterprise Security",
-    description: "SOC 2 compliant with built-in DDoS protection and encryption at rest.",
+    title: "Segurança Digital",
+    description: "Proteção contra ameaças cibernéticas com firewall, antivírus corporativo e políticas de segurança.",
   },
   {
-    icon: Code2,
-    title: "Developer First",
-    description: "CLI tools, SDKs, and APIs designed for seamless developer experience.",
+    icon: Wifi,
+    title: "Redes e Conectividade",
+    description: "Projeto, instalação e manutenção de redes cabeadas e Wi-Fi para ambientes corporativos.",
   },
   {
-    icon: Server,
-    title: "Managed Infrastructure",
-    description: "Fully managed servers, load balancers, and automated failovers.",
+    icon: HardDrive,
+    title: "Backup e Recuperação",
+    description: "Soluções de backup em nuvem e local para garantir a segurança dos seus dados críticos.",
   },
   {
-    icon: Database,
-    title: "Cloud Databases",
-    description: "Managed PostgreSQL, Redis, and object storage with automatic backups.",
+    icon: Settings,
+    title: "Consultoria em T.I.",
+    description: "Análise e planejamento estratégico para alinhar a tecnologia aos objetivos do seu negócio.",
   },
 ];
 
 const container = {
   hidden: {},
-  show: {
-    transition: { staggerChildren: 0.1 },
-  },
+  show: { transition: { staggerChildren: 0.1 } },
 };
 
 const item = {
@@ -48,7 +46,7 @@ const item = {
 
 const FeaturesSection = () => {
   return (
-    <section id="products" className="relative py-32">
+    <section id="servicos" className="relative py-32">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,10 +56,10 @@ const FeaturesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
-            Everything you need to <span className="gradient-text">ship faster</span>
+            Nossos <span className="gradient-text">Serviços</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            A complete cloud platform built for modern teams that demand performance and reliability.
+            Soluções completas em tecnologia da informação para empresas de todos os portes.
           </p>
         </motion.div>
 
@@ -72,17 +70,17 @@ const FeaturesSection = () => {
           viewport={{ once: true }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {features.map((feature) => (
+          {services.map((service) => (
             <motion.div
-              key={feature.title}
+              key={service.title}
               variants={item}
               className="glass-card glow-border p-6 group hover:border-primary/30 transition-colors duration-300"
             >
               <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary mb-4 group-hover:bg-primary/15 transition-colors">
-                <feature.icon className="h-5 w-5" />
+                <service.icon className="h-5 w-5" />
               </div>
-              <h3 className="font-display font-semibold text-lg mb-2">{feature.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+              <h3 className="font-display font-semibold text-lg mb-2">{service.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </motion.div>

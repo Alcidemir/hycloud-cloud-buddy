@@ -3,7 +3,12 @@ import { motion } from "framer-motion";
 import { Cloud, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const navItems = ["Products", "Solutions", "Pricing", "Docs"];
+const navItems = [
+  { label: "Serviços", href: "#servicos" },
+  { label: "Sobre", href: "#sobre" },
+  { label: "Diferenciais", href: "#diferenciais" },
+  { label: "Contato", href: "#contato" },
+];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -26,20 +31,17 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
-            Sign In
-          </Button>
-          <Button size="sm">Get Started</Button>
+          <Button size="sm">Fale Conosco</Button>
         </div>
 
         <button
@@ -58,16 +60,16 @@ const Navbar = () => {
         >
           {navItems.map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               className="block text-sm text-muted-foreground hover:text-foreground"
+              onClick={() => setMobileOpen(false)}
             >
-              {item}
+              {item.label}
             </a>
           ))}
-          <div className="pt-3 flex flex-col gap-2">
-            <Button variant="ghost" size="sm">Sign In</Button>
-            <Button size="sm">Get Started</Button>
+          <div className="pt-3">
+            <Button size="sm" className="w-full">Fale Conosco</Button>
           </div>
         </motion.div>
       )}

@@ -8,6 +8,7 @@ services:
       - "--api.dashboard=false"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
+      - "--providers.docker.network=hycloud-network"
       - "--entrypoints.web.address=:80"
       - "--entrypoints.websecure.address=:443"
       - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
@@ -21,6 +22,18 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - letsencrypt:/letsencrypt
+    networks:
+      - hycloud-network
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: "0.50"
     restart: unless-stopped
 
   hycloud-site:
@@ -31,7 +44,29 @@ services:
       - "traefik.http.routers.hycloud.rule=Host(`${DOMAIN:-hycloud.com.br}`)"
       - "traefik.http.routers.hycloud.entrypoints=websecure"
       - "traefik.http.routers.hycloud.tls.certresolver=letsencrypt"
+    networks:
+      - hycloud-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: "0.50"
     restart: unless-stopped
+
+networks:
+  hycloud-network:
+    driver: bridge
 
 volumes:
   letsencrypt:

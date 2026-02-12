@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 
 const navItems = [
   { label: "Serviços", href: "#servicos" },
-  { label: "Sobre", href: "#sobre" },
+  { label: "Tecnologias", href: "#tecnologias" },
   { label: "Diferenciais", href: "#diferenciais" },
+  { label: "Cartórios", href: "#cartorios" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -41,7 +42,15 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <Button size="sm">Fale Conosco</Button>
+          <Button size="sm" asChild>
+            <a
+              href="https://wa.me/5567981342378?text=Olá! Gostaria de saber mais sobre os serviços da HyCloud."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Falar no WhatsApp
+            </a>
+          </Button>
         </div>
 
         <button
@@ -69,7 +78,15 @@ const Navbar = () => {
             </a>
           ))}
           <div className="pt-3">
-            <Button size="sm" className="w-full">Fale Conosco</Button>
+            <Button size="sm" className="w-full" asChild>
+              <a
+                href="https://wa.me/5567981342378?text=Olá! Gostaria de saber mais sobre os serviços da HyCloud."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Falar no WhatsApp
+              </a>
+            </Button>
           </div>
         </motion.div>
       )}

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Headset } from "lucide-react";
+import { ArrowRight, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -18,8 +18,8 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-secondary/50 px-4 py-1.5 text-xs text-muted-foreground mb-8"
         >
-          <Headset className="h-3.5 w-3.5 text-primary" />
-          Suporte especializado em T.I.
+          <Shield className="h-3.5 w-3.5 text-primary" />
+          Infraestrutura & Segurança de T.I.
         </motion.div>
 
         <motion.h1
@@ -28,9 +28,9 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold tracking-tight leading-[1.1] mb-6"
         >
-          Tecnologia que
+          T.I. sob controle,
           <br />
-          <span className="gradient-text">impulsiona seu negócio</span>
+          <span className="gradient-text">negócio em crescimento</span>
         </motion.h1>
 
         <motion.p
@@ -39,8 +39,8 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="mx-auto max-w-xl text-lg text-muted-foreground mb-10"
         >
-          Soluções completas em suporte técnico, infraestrutura e segurança de T.I. 
-          para sua empresa crescer com tranquilidade.
+          Servidores, virtualização, firewall, backup e segurança — com profissionais
+          certificados e atendimento humanizado para sua empresa.
         </motion.p>
 
         <motion.div
@@ -49,11 +49,17 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Button size="lg" className="gap-2 text-base px-8">
-            Solicitar Orçamento <ArrowRight className="h-4 w-4" />
+          <Button size="lg" className="gap-2 text-base px-8" asChild>
+            <a
+              href="https://wa.me/5567981342378?text=Olá! Gostaria de solicitar um orçamento."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Falar no WhatsApp <ArrowRight className="h-4 w-4" />
+            </a>
           </Button>
-          <Button variant="outline" size="lg" className="text-base px-8">
-            Nossos Serviços
+          <Button variant="outline" size="lg" className="text-base px-8" asChild>
+            <a href="#servicos">Nossos Serviços</a>
           </Button>
         </motion.div>
 
@@ -64,10 +70,10 @@ const HeroSection = () => {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto"
         >
           {[
-            { value: "500+", label: "Clientes Atendidos" },
-            { value: "24/7", label: "Suporte Disponível" },
-            { value: "99.9%", label: "Satisfação" },
             { value: "10+", label: "Anos de Experiência" },
+            { value: "24/7", label: "Monitoramento" },
+            { value: "99.9%", label: "Disponibilidade" },
+            { value: "2h", label: "SLA de Atendimento" },
           ].map((stat) => (
             <div key={stat.label}>
               <div className="text-2xl sm:text-3xl font-display font-bold gradient-text">

@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 
 const technologies = [
-  { name: "FortiGate", category: "Firewall" },
-  { name: "MikroTik", category: "Roteamento" },
-  { name: "VMware", category: "Virtualização" },
-  { name: "Hyper-V", category: "Virtualização" },
-  { name: "Proxmox", category: "Open Source" },
-  { name: "Veeam", category: "Backup" },
-  { name: "Windows Server", category: "Servidor" },
-  { name: "Linux", category: "Servidor" },
+  { name: "FortiGate", category: "Firewall", logo: "https://upload.wikimedia.org/wikipedia/commons/6/62/Fortinet_logo.svg" },
+  { name: "MikroTik", category: "Roteamento", logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/MikroTik_logo.svg" },
+  { name: "VMware", category: "Virtualização", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg" },
+  { name: "Hyper-V", category: "Virtualização", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
+  { name: "Proxmox", category: "Open Source", logo: "https://www.proxmox.com/images/proxmox/Proxmox_logo_standard_hex_400px.png" },
+  { name: "Veeam", category: "Backup", logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Veeam_logo.svg" },
+  { name: "Windows Server", category: "Servidor", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
+  { name: "Linux", category: "Servidor", logo: "https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" },
 ];
 
 const container = {
@@ -51,10 +51,18 @@ const TechPartnersSection = () => {
             <motion.div
               key={tech.name}
               variants={item}
-              className="glass-card glow-border p-5 text-center group hover:border-primary/30 transition-colors duration-300"
+              className="glass-card glow-border p-5 flex flex-col items-center gap-3 group hover:border-primary/30 transition-colors duration-300"
             >
-              <div className="font-display font-semibold text-foreground mb-1">{tech.name}</div>
-              <div className="text-xs text-muted-foreground">{tech.category}</div>
+              <img
+                src={tech.logo}
+                alt={`Logo ${tech.name}`}
+                className="h-8 w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                loading="lazy"
+              />
+              <div className="text-center">
+                <div className="font-display font-semibold text-foreground text-sm">{tech.name}</div>
+                <div className="text-xs text-muted-foreground">{tech.category}</div>
+              </div>
             </motion.div>
           ))}
         </motion.div>

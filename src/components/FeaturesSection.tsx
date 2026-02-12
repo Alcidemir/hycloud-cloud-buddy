@@ -1,36 +1,36 @@
 import { motion } from "framer-motion";
-import { Monitor, Shield, Wifi, HardDrive, Headset, Settings } from "lucide-react";
+import { Server, Shield, Wifi, HardDrive, Monitor, Settings } from "lucide-react";
 
 const services = [
   {
-    icon: Headset,
-    title: "Suporte Técnico",
-    description: "Atendimento remoto e presencial para resolver problemas de hardware, software e rede com agilidade.",
+    icon: Server,
+    title: "Servidores Windows & Linux",
+    description: "Implantação, configuração e manutenção de servidores físicos e virtuais com alta disponibilidade.",
   },
   {
     icon: Monitor,
-    title: "Gestão de T.I.",
-    description: "Gerenciamento completo da infraestrutura tecnológica da sua empresa, com monitoramento contínuo.",
+    title: "Virtualização",
+    description: "Ambientes Hyper-V, VMware e Proxmox — consolidação de servidores com performance e economia.",
   },
   {
     icon: Shield,
-    title: "Segurança Digital",
-    description: "Proteção contra ameaças cibernéticas com firewall, antivírus corporativo e políticas de segurança.",
+    title: "Firewall & Segurança",
+    description: "FortiGate e MikroTik para proteção de perímetro, VPN, controle de acesso e políticas de segurança.",
   },
   {
     icon: Wifi,
-    title: "Redes e Conectividade",
-    description: "Projeto, instalação e manutenção de redes cabeadas e Wi-Fi para ambientes corporativos.",
+    title: "Redes & Conectividade",
+    description: "Projeto, instalação e manutenção de redes cabeadas e Wi-Fi corporativas com monitoramento.",
   },
   {
     icon: HardDrive,
-    title: "Backup e Recuperação",
-    description: "Soluções de backup em nuvem e local para garantir a segurança dos seus dados críticos.",
+    title: "Backup & Recuperação",
+    description: "Soluções Veeam para backup local e em nuvem, garantindo a segurança dos seus dados críticos.",
   },
   {
     icon: Settings,
     title: "Consultoria em T.I.",
-    description: "Análise e planejamento estratégico para alinhar a tecnologia aos objetivos do seu negócio.",
+    description: "Análise estratégica para alinhar a tecnologia aos objetivos do seu negócio com eficiência.",
   },
 ];
 
@@ -59,7 +59,7 @@ const FeaturesSection = () => {
             Nossos <span className="gradient-text">Serviços</span>
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto">
-            Soluções completas em tecnologia da informação para empresas de todos os portes.
+            Infraestrutura, segurança e suporte técnico especializado para empresas de todos os portes.
           </p>
         </motion.div>
 

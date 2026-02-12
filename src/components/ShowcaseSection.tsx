@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroBg from "@/assets/hero-bg.jpg";
+import showcaseImg from "@/assets/showcase-infra.jpg";
 
 const ShowcaseSection = () => {
   return (
@@ -13,8 +13,8 @@ const ShowcaseSection = () => {
           className="glass-card glow-border overflow-hidden"
         >
           <img
-            src={heroBg}
-            alt="HyCloud infrastructure visualization"
+            src={showcaseImg}
+            alt="Profissional HyCloud configurando infraestrutura de rede"
             className="w-full h-auto"
             loading="lazy"
           />

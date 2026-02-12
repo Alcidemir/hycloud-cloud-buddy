@@ -50,13 +50,7 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Button size="lg" className="gap-2 text-base px-8" asChild>
-            <a
-              href="https://wa.me/5567981342378?text=Olá! Gostaria de solicitar um orçamento."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Falar no WhatsApp <ArrowRight className="h-4 w-4" />
-            </a>
+            <a href="#contato">Solicitar Orçamento <ArrowRight className="h-4 w-4" /></a>
           </Button>
           <Button variant="outline" size="lg" className="text-base px-8" asChild>
             <a href="#servicos">Nossos Serviços</a>

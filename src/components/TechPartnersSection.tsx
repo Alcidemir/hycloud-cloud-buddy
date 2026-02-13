@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 const technologies = [
   { name: "FortiGate", category: "Firewall", logo: "https://upload.wikimedia.org/wikipedia/commons/6/62/Fortinet_logo.svg" },
   { name: "MikroTik", category: "Roteamento", logo: "https://mikrotik.com/img/mtv2/newlogo.svg" },
+  { name: "UniFi", category: "Redes", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Ubiquiti_Inc._2024.svg" },
   { name: "VMware", category: "Virtualização", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg" },
   { name: "Hyper-V", category: "Virtualização", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
   { name: "Proxmox", category: "Open Source", logo: "https://www.proxmox.com/images/proxmox/Proxmox_logo_standard_hex_400px.png" },

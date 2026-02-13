@@ -1,4 +1,4 @@
-import { Cloud } from "lucide-react";
+import hycloudLogo from "@/assets/hycloud-logo.png";
 
 const Footer = () => {
   return (
@@ -7,10 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-4">
-              <Cloud className="h-6 w-6 text-primary" />
-              <span className="text-lg font-display font-bold">
-                Hy<span className="text-primary">Cloud</span>
-              </span>
+              <img src={hycloudLogo} alt="HyCloud" className="h-9 w-auto" />
             </a>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Infraestrutura, segurança e suporte em T.I. para empresas que querem crescer com tranquilidade.
@@ -33,7 +30,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-sm mb-4">Empresa</h4>
             <ul className="space-y-2.5">
-              {["Diferenciais", "Tecnologias", "Cartórios", "Contato"].map((link) => (
+              {["Diferenciais", "Tecnologias", "Contato"].map((link) => (
                 <li key={link}>
                   <a href={`#${link.toLowerCase()}`} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                     {link}

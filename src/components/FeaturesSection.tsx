@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Server, Shield, Wifi, HardDrive, Monitor, Settings } from "lucide-react";
+import { Server, Shield, Wifi, HardDrive, Monitor, Settings, Scale } from "lucide-react";
 
 const services = [
   {
@@ -31,6 +31,11 @@ const services = [
     icon: Settings,
     title: "Consultoria em T.I.",
     description: "Análise estratégica para alinhar a tecnologia aos objetivos do seu negócio com eficiência.",
+  },
+  {
+    icon: Scale,
+    title: "Provimento 74 – Cartórios",
+    description: "Implantação completa da infraestrutura de T.I. conforme exigências do Provimento 74 do CNJ — segurança, backup, firewall e conformidade.",
   },
 ];
 

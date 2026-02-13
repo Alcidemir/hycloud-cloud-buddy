@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Cloud, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import hycloudLogo from "@/assets/hycloud-logo.png";
 
 const navItems = [
   { label: "Serviços", href: "#servicos" },
   { label: "Tecnologias", href: "#tecnologias" },
   { label: "Diferenciais", href: "#diferenciais" },
-  { label: "Cartórios", href: "#cartorios" },
+  
   { label: "Contato", href: "#contato" },
 ];
 
@@ -23,10 +24,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-6">
         <a href="/" className="flex items-center gap-2">
-          <Cloud className="h-7 w-7 text-primary" />
-          <span className="text-xl font-display font-bold tracking-tight text-foreground">
-            Hy<span className="text-primary">Cloud</span>
-          </span>
+          <img src={hycloudLogo} alt="HyCloud" className="h-10 w-auto" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">

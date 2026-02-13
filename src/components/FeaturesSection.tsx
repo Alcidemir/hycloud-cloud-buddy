@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Server, Shield, Wifi, HardDrive, Monitor, Settings, Scale } from "lucide-react";
+import { Server, Shield, Wifi, HardDrive, Monitor, Settings, Scale, LifeBuoy } from "lucide-react";
 
 const services = [
   {
@@ -20,12 +20,17 @@ const services = [
   {
     icon: Wifi,
     title: "Redes & Conectividade",
-    description: "Projeto, instalação e manutenção de redes cabeadas e Wi-Fi corporativas com monitoramento.",
+    description: "Projeto, instalação e manutenção de redes cabeadas, Wi-Fi corporativas, switches e access points.",
   },
   {
     icon: HardDrive,
     title: "Backup & Recuperação",
     description: "Soluções Veeam para backup local e em nuvem, garantindo a segurança dos seus dados críticos.",
+  },
+  {
+    icon: LifeBuoy,
+    title: "Suporte de Estações",
+    description: "Suporte técnico para desktops, notebooks e estações de trabalho — instalação, manutenção e configuração.",
   },
   {
     icon: Settings,
@@ -35,7 +40,7 @@ const services = [
   {
     icon: Scale,
     title: "Provimento 74 – Cartórios",
-    description: "Implantação completa da infraestrutura de T.I. conforme exigências do Provimento 74 do CNJ — segurança, backup, firewall e conformidade.",
+    description: "Implantação completa da infraestrutura de T.I. conforme exigências do Provimento 74 do CNJ.",
   },
 ];
 
@@ -73,7 +78,7 @@ const FeaturesSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {services.map((service) => (
             <motion.div

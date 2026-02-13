@@ -6,7 +6,7 @@ const technologies = [
   { name: "VMware", category: "Virtualização", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg" },
   { name: "Hyper-V", category: "Virtualização", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
   { name: "Proxmox", category: "Open Source", logo: "https://www.proxmox.com/images/proxmox/Proxmox_logo_standard_hex_400px.png" },
-  { name: "Veeam", category: "Backup", logo: "https://upload.wikimedia.org/wikipedia/commons/5/55/Veeam_logo.png" },
+  { name: "Veeam", category: "Backup", logo: "https://logos-world.net/wp-content/uploads/2021/03/Veeam-Logo.png" },
   { name: "Windows Server", category: "Servidor", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
   { name: "Linux", category: "Servidor", logo: "https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" },
 ];

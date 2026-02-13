@@ -24,7 +24,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-6">
         <a href="/" className="flex items-center gap-2">
-          <img src={hycloudLogo} alt="HyCloud" className="h-14 w-auto" />
+          <img src={hycloudLogo} alt="HyCloud" className="h-56 w-auto" />
         </a>
 
         <div className="hidden md:flex items-center gap-8">

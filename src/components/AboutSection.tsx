@@ -22,7 +22,7 @@ const AboutSection = () => {
             transition={{ duration: 0.7 }}
           >
             <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6">
-              Quem é a <span className="gradient-text">HyCloud?</span>
+              Quem é a <span className="brand-text">HyCloud</span>?
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Somos uma empresa de T.I. de Campo Grande – MS, especializada em

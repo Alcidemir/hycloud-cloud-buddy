@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import ubiquitiLogo from "@/assets/ubiquiti-logo.png";
 
 const technologies = [
   { name: "FortiGate", category: "Firewall", logo: "https://upload.wikimedia.org/wikipedia/commons/6/62/Fortinet_logo.svg" },
   { name: "MikroTik", category: "Roteamento", logo: "https://mikrotik.com/img/mtv2/newlogo.svg" },
-  { name: "UniFi", category: "Redes", logo: "https://upload.wikimedia.org/wikipedia/commons/5/52/Ubiquiti_Logo_Horizontal.png" },
+  { name: "UniFi", category: "Redes", logo: ubiquitiLogo },
   { name: "Zabbix", category: "Monitoramento", logo: "https://assets.zabbix.com/img/logo/zabbix_logo_500x131.png" },
   { name: "VMware", category: "Virtualização", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg" },
   { name: "Hyper-V", category: "Virtualização", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },

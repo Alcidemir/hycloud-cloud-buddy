@@ -37,7 +37,7 @@ const CTASection = () => {
           <div className="relative z-10 grid lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
-                Fale com a <span className="gradient-text">HyCloud</span>
+                Fale com a <span className="brand-text">HyCloud</span>
               </h2>
               <p className="text-muted-foreground mb-8">
                 Solicite um orçamento ou tire suas dúvidas. Respondemos rápido!

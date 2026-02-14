@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 const technologies = [
   { name: "FortiGate", category: "Firewall", logo: "https://upload.wikimedia.org/wikipedia/commons/6/62/Fortinet_logo.svg" },
   { name: "MikroTik", category: "Roteamento", logo: "https://mikrotik.com/img/mtv2/newlogo.svg" },
-  { name: "UniFi", category: "Redes", logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Ubiquiti_Inc._2024.svg" },
+  { name: "UniFi", category: "Redes", logo: "https://upload.wikimedia.org/wikipedia/commons/5/52/Ubiquiti_Logo_Horizontal.png" },
+  { name: "Zabbix", category: "Monitoramento", logo: "https://assets.zabbix.com/img/logo/zabbix_logo_500x131.png" },
   { name: "VMware", category: "Virtualização", logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg" },
   { name: "Hyper-V", category: "Virtualização", logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" },
   { name: "Proxmox", category: "Open Source", logo: "https://www.proxmox.com/images/proxmox/Proxmox_logo_standard_hex_400px.png" },
@@ -46,7 +47,7 @@ const TechPartnersSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto"
+          className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-4 max-w-4xl mx-auto"
         >
           {technologies.map((tech) => (
             <motion.div

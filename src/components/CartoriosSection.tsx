@@ -22,11 +22,11 @@ const CartoriosSection = () => {
               </div>
               <h2 className="text-3xl sm:text-4xl font-display font-bold mb-4">
                 Implantação do{" "}
-                <span className="gradient-text">Provimento 74</span>
+                <span className="gradient-text">Provimento 213</span>
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Adequação completa da infraestrutura de T.I. do seu cartório às
-                exigências do Provimento 74 do CNJ — segurança da informação,
+                exigências do Provimento 213 do CNJ — segurança da informação,
                 backup, firewall, controle de acesso e conformidade.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
@@ -35,7 +35,7 @@ const CartoriosSection = () => {
               </p>
               <Button size="lg" className="gap-2 text-base px-8 w-fit" asChild>
                 <a
-                  href="https://wa.me/5567981342378?text=Olá! Tenho interesse na implantação do Provimento 74 para meu cartório."
+                  href="https://wa.me/5567981342378?text=Olá! Tenho interesse na implantação do Provimento 213 para meu cartório."
                   target="_blank"
                   rel="noopener noreferrer"
                 >

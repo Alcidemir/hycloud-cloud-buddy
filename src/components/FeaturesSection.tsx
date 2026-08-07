@@ -39,8 +39,8 @@ const services = [
   },
   {
     icon: Scale,
-    title: "Provimento 74 – Cartórios",
-    description: "Implantação completa da infraestrutura de T.I. conforme exigências do Provimento 74 do CNJ.",
+    title: "Provimento 213 – Cartórios",
+    description: "Implantação completa da infraestrutura de T.I. conforme exigências do Provimento 213 do CNJ.",
   },
 ];
 

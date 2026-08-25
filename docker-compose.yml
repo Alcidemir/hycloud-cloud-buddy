@@ -24,10 +24,11 @@ services:
       - letsencrypt:/letsencrypt
     networks:
       - hycloud-network
-    log_driver: "json-file"
-    log_opt:
-      max-size: "10m"
-      max-file: "3"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
     mem_limit: 128m
     cpu_shares: 512
     restart: unless-stopped
@@ -42,10 +43,11 @@ services:
       - "traefik.http.routers.hycloud.tls.certresolver=letsencrypt"
     networks:
       - hycloud-network
-    log_driver: "json-file"
-    log_opt:
-      max-size: "10m"
-      max-file: "3"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
     mem_limit: 256m
     cpu_shares: 512
     restart: unless-stopped

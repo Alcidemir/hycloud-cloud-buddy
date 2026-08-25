@@ -1,4 +1,4 @@
-version: "3.8"
+version: "2"
 
 services:
   traefik:
@@ -14,7 +14,7 @@ services:
       - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
       - "--certificatesresolvers.letsencrypt.acme.httpchallenge=true"
       - "--certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web"
-      - "--certificatesresolvers.letsencrypt.acme.email=${ACME_EMAIL:-admin@hycloud.com.br}"
+      - "--certificatesresolvers.letsencrypt.acme.email=${ACME_EMAIL}"
       - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
     ports:
       - "80:80"
@@ -24,16 +24,12 @@ services:
       - letsencrypt:/letsencrypt
     networks:
       - hycloud-network
-    logging:
-      driver: json-file
-      options:
-        max-size: "10m"
-        max-file: "3"
-    deploy:
-      resources:
-        limits:
-          memory: 128M
-          cpus: "0.50"
+    log_driver: "json-file"
+    log_opt:
+      max-size: "10m"
+      max-file: "3"
+    mem_limit: 128m
+    cpu_shares: 512
     restart: unless-stopped
 
   hycloud-site:
@@ -41,27 +37,17 @@ services:
     container_name: hycloud-site
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.hycloud.rule=Host(`${DOMAIN:-hycloud.com.br}`)"
+      - "traefik.http.routers.hycloud.rule=Host(`${DOMAIN}`)"
       - "traefik.http.routers.hycloud.entrypoints=websecure"
       - "traefik.http.routers.hycloud.tls.certresolver=letsencrypt"
     networks:
       - hycloud-network
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:80"]
-      interval: 30s
-      timeout: 5s
-      retries: 3
-      start_period: 10s
-    logging:
-      driver: json-file
-      options:
-        max-size: "10m"
-        max-file: "3"
-    deploy:
-      resources:
-        limits:
-          memory: 256M
-          cpus: "0.50"
+    log_driver: "json-file"
+    log_opt:
+      max-size: "10m"
+      max-file: "3"
+    mem_limit: 256m
+    cpu_shares: 512
     restart: unless-stopped
 
 networks:
@@ -70,3 +56,4 @@ networks:
 
 volumes:
   letsencrypt:
+    driver: local

@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-4">
-              <img src={hycloudLogo} alt="HyCloud" className="h-9 w-auto" />
+              <img src={hycloudLogo} alt="HyCloud" className="h-24 w-auto" />
             </a>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Infraestrutura, segurança e suporte em T.I. para empresas que querem crescer com tranquilidade.

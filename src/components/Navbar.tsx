@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-3">
           <Button size="sm" asChild>
             <a
-              href="https://wa.me/5567981342378?text=Olá! Gostaria de saber mais sobre os serviços da HyCloud."
+              href="https://wa.me/556731980908?text=Olá! Gostaria de saber mais sobre os serviços da HyCloud."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -78,7 +78,7 @@ const Navbar = () => {
           <div className="pt-3">
             <Button size="sm" className="w-full" asChild>
               <a
-                href="https://wa.me/5567981342378?text=Olá! Gostaria de saber mais sobre os serviços da HyCloud."
+                href="https://wa.me/556731980908?text=Olá! Gostaria de saber mais sobre os serviços da HyCloud."
                 target="_blank"
                 rel="noopener noreferrer"
               >

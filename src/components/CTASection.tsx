@@ -18,7 +18,7 @@ const CTASection = () => {
       return;
     }
     const text = `Olá! Meu nome é ${nome}${empresa ? ` da empresa ${empresa}` : ""}. Telefone: ${telefone}${email ? `. E-mail: ${email}` : ""}${mensagem ? `. Mensagem: ${mensagem}` : ""}`;
-    window.open(`https://wa.me/5567981342378?text=${encodeURIComponent(text)}`, "_blank");
+    window.open(`https://wa.me/556731980908?text=${encodeURIComponent(text)}`, "_blank");
     toast({ title: "Redirecionando para o WhatsApp..." });
   };
 
@@ -45,7 +45,7 @@ const CTASection = () => {
 
               <div className="space-y-5 mb-8">
                 {[
-                  { icon: Phone, label: "WhatsApp", value: "(67) 98134-2378", href: "https://wa.me/5567981342378" },
+                  { icon: Phone, label: "WhatsApp", value: "(67) 3198-0908", href: "https://wa.me/556731980908" },
                   { icon: Mail, label: "E-mail", value: "contato@hycloud.com.br", href: "mailto:contato@hycloud.com.br" },
                   { icon: MapPin, label: "Localização", value: "Campo Grande – MS" },
                 ].map((info) => (
@@ -69,7 +69,7 @@ const CTASection = () => {
 
               <Button size="lg" className="gap-2 text-base px-8" asChild>
                 <a
-                  href="https://wa.me/5567981342378?text=Olá! Gostaria de saber mais sobre os serviços da HyCloud."
+                  href="https://wa.me/556731980908?text=Olá! Gostaria de saber mais sobre os serviços da HyCloud."
                   target="_blank"
                   rel="noopener noreferrer"
                 >

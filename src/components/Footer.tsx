@@ -44,8 +44,8 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-sm mb-4">Contato</h4>
             <ul className="space-y-2.5">
               <li>
-                <a href="https://wa.me/5567981342378" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  (67) 98134-2378
+                <a href="https://wa.me/556731980908" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  (67) 3198-0908
                 </a>
               </li>
               <li>

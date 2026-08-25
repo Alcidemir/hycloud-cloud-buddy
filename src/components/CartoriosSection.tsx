@@ -35,7 +35,7 @@ const CartoriosSection = () => {
               </p>
               <Button size="lg" className="gap-2 text-base px-8 w-fit" asChild>
                 <a
-                  href="https://wa.me/5567981342378?text=Olá! Tenho interesse na implantação do Provimento 213 para meu cartório."
+                  href="https://wa.me/556731980908?text=Olá! Tenho interesse na implantação do Provimento 213 para meu cartório."
                   target="_blank"
                   rel="noopener noreferrer"
                 >

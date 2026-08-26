@@ -1,4 +1,4 @@
-import hycloudLogo from "@/assets/hycloud-logo.png";
+import hycloudLogo from "@/assets/hycloud-logo-cropped.png";
 
 const Footer = () => {
   return (
@@ -6,8 +6,8 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           <div className="col-span-2 md:col-span-1">
-            <a href="/" className="flex items-center gap-2 mb-4">
-              <img src={hycloudLogo} alt="HyCloud" className="h-96 w-auto" />
+            <a href="/" className="flex items-start gap-2 mb-4">
+              <img src={hycloudLogo} alt="HyCloud" className="h-28 w-auto max-w-full object-contain" />
             </a>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Infraestrutura, segurança e suporte em T.I. para empresas que querem crescer com tranquilidade.

@@ -36,9 +36,8 @@ jobs:
           script: |
             set -e
             cd ${{ secrets.PROJECT_PATH }}
-            git fetch --all
+            git fetch origin
             git reset --hard origin/main
-            docker compose pull || true
-            docker compose up -d --build
+            docker compose up -d --build hycloud-site
             docker image prune -f
-            docker compose ps
+            docker compose ps hycloud-site

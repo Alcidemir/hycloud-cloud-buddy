@@ -5,7 +5,7 @@ services:
     build: .
     container_name: hycloud-site
     ports:
-      - "3480:80"
+      - "80:80"
     networks:
       - hycloud-network
     logging:
